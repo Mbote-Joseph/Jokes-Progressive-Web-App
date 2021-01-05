@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align: center" class="title">
+  <h1>Welcome to {{ title }}!</h1>
+</div>
+<hr />
+<div id="date">{{ date }}</div>
+<hr />
+<div class="container">
+  <h2 style="text-align: center">Random Jokes</h2>
+  <div *ngFor="let joke of jokes; index as i" class="row">
+    <!-- <strong> #{{ i+1 }} </strong> -->
+    <span [innerHTML]="joke.joke"></span>
+    <br /><br /><br /><br /><br />
+  </div>
+  <p>Jokes provided by</p>
+  <code>http://api.icndb.com/jokes</code>
+</div>
